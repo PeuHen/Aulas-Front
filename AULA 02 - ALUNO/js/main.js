@@ -6,8 +6,8 @@ function getDados() {
   // confirm("Deseja salvar os dados"); // *msg com interação
   // var teste = prompt("Digite um numero"); // *prompt = input do JS / var = criar variavel
   // console.log(teste); // *mostrando oq digitei no prompt
-  // var nome = document.getElementById("nome").value; // *.value = pegar o VALOR
-  // var email = document.getElementById("email").value;
+  var nome = document.getElementById("nome"); // *.value = pegar o VALOR
+  var email = document.getElementById("email");
   // console.log(nome)
   // console.log(email)
 
@@ -32,11 +32,24 @@ function getDados() {
 
 
 */
-  if (nome == "" || email == "") {
+  if (nome.value == "" || email.value == "") {
     alert("Preencha seus dados");
+    if (nome.value == ''){
+        nome.style.backgroundColor = '#5c0c06';
+    }
+    if (email.value == ''){
+        email.style.backgroundColor = 'cyan';
+    }
   }
 }
 
-function setBlockNumber() {
-  console.log("teste");
+function setBlockNumber(tecla) {
+  console.log(tecla.charCode);
+                                // ? charCode -> correlação com Tabela ASCII
+
+    if (tecla.charCode >=48 && tecla.charCode <=57){    
+        // ! essa logica faz com oq os numeros nao sejam digitaveis
+        // alert("FUNFOU")
+        return false;
+    }
 }

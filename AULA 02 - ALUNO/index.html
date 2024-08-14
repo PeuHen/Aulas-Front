@@ -6,7 +6,7 @@
     <title>Aula 02</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/main.js" defer></script>
-                  <!-- ? module e defer NÃO é obrigatorio! mas é recomendado
+    <!-- ? module e defer NÃO é obrigatorio! mas é recomendado
 
                   *DEFER = O atributo defer faz com que o navegador adie a execução do script até que o HTML esteja completamente carregado e analisado;
                   
@@ -30,8 +30,12 @@
               id="nome"
               class="valor"
               placeholder="Nome do Cliente"
-              onkeypress="setBlockNumber()"
+              onkeypress=" return setBlockNumber(event)"
             />
+            <!--?  onkeypress = no momento que pressionou a tecla 
+             <!-- ? com return no HTML junto com o return na funcao (js), faz com oq a tecla nao apareça no input
+              -->
+
             <br />
             <label>E-mail:</label
             ><input
@@ -41,6 +45,7 @@
               id="email"
               class="valor"
               placeholder="nome@email.com"
+              
             />
             <br />
             <input
